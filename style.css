@@ -239,7 +239,7 @@ img {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-    z-index: 3;
+    z-index: 5;
     background-color: #F9F7EA;
 
 }
@@ -249,8 +249,16 @@ img {
     left: 45%;
     top: 85%;
     opacity: 1;
+    transition: all .2s ease-in-out; 
 }
-
+    
+.shrink:hover { 
+    transform: scale(0.9); 
+    z-index: 3;
+}
+html { 
+    scroll-behavior: smooth; 
+  }
 .container {
     max-width: auto;
     margin-top: 0px;
@@ -265,6 +273,11 @@ img {
     z-index: 6;
     opacity: 1;
     background-color: #F9F7EA;
+    transition: all .2s ease-in-out; 
+}
+.container-1 {
+    padding-top: 100px;
+    transition: all .2s ease-in-out; 
 }
 
 img.container{
@@ -332,12 +345,11 @@ img.container{
     color: #93ca91;
     transition-duration: 1s;
   }*/
-
-a:link {
+.navbar a:link {
     text-decoration: none;
     text-align: right;
   }
-a::before {
+.navbar a::before {
     content: "";
     position: absolute;
     display: block;
@@ -350,29 +362,53 @@ a::before {
     transform: scaleX(0);
     transition: transform 0.5s ease;
 }
-  
-  a:hover::before {
+.navbar a:hover::before {
     transform: scaleX(1);
   }
 
 
 /***** ABOUT ME *****/
+.aboutmegrid {
+    display: grid;
+    padding-top: 75px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    z-index: 3;
+    background-color: #F9F7EA;
+}
 
+.divabout1 {
+    padding-top: 100px;
+    padding-left: 130px;
+    border-color: #3B3A37;
+}
 .about1 {
     font-family: 'Playfair Display', serif;
     color: #3B3A37;
     font-size: 50px;
     position: relative;
-    top: 50px;
+}
+.about2-1{
+    padding-top: 150px;
+    font-family: 'Montserrat', serif;
+    color: #3B3A37;
+    font-size: 30px;
+    position: relative;
 }
 .about2 {
     color: #3B3A37;
     font-family: 'Montserrat', sans-serif;
     position: relative;
     font-size: 20px;
-    top: 80px;
 }
 
+.divabout2 {
+    width: 80%;
+    position: relative;
+    line-height: 200%;
+    padding-left: 40px;
+}
 /******PORT1 *******/
 .port1 {
     text-align: center;
@@ -383,5 +419,36 @@ a::before {
     position: relative;
 }
 
+/******* HELPSPACE ******/
+.title {
+    position: relative;
+    padding-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #3B3A37;
+    font-size: 50px;
+    text-align: center;
+}
+.firstPhoto {
+    padding-top: 30px;
+    align-items: center;
+}
 
+.firstPhoto img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
 
+.workDes {
+    font-family: 'Montserrat', sans-serif;
+    color: #3B3A37;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.des {
+    padding-left: 10px;
+    padding-right: 10px;
+}
